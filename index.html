@@ -1,50 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dashboard Configuration POC</title>
-
-  <!-- Chart.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <!-- CSS -->
+  <meta charset="UTF-8" />
+  <title>Customer Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
-  <!-- MAIN CONTAINER -->
-  <div class="container">
-
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-      <h3>Menu</h3>
-      <p>Dashboard</p>
-      <p>Reports</p>
-      <p>Settings</p>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div class="main">
-
-      <!-- HEADER -->
-      <div class="header">
-        <h2>My Dashboard</h2>
-        <div class="header-buttons">
-          <button id="addWidgetBtn">Add Chart</button>
-          <button onclick="addKPI()">Add KPI</button>
-        </div>
+<div class="container">
+  <aside class="sidebar">
+    <h2>Customer</h2>
+    <p>Dashboard</p>
+    <p>Orders</p>
+    <p>Reports</p>
+  </aside>
+  <main class="main">
+    <header class="header">
+      <h2>Customer Dashboard</h2>
+      <div>
+        <button id="addChartBtn">Add Chart</button>
+        <button onclick="addKPI()">Add KPI</button>
       </div>
-
-      <!-- DASHBOARD AREA -->
-      <div class="dashboard" id="dashboard">
-        <!-- Widgets will be added here dynamically -->
-      </div>
-
-    </div>
-  </div>
-
-  <!-- JavaScript -->
-  <script src="script.js"></script>
-
+    </header>
+    <section id="widgetArea" class="dashboard"></section>
+  </main>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
